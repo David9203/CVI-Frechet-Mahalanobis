@@ -6,3 +6,7 @@ Another Indices Test:
 	Test_another_indices.ipynb --> Uses mdcgenpy and ClusterFeatures to test different indices in diferents databases
     SyntheticData Configuration---> Containt different Test configuration (normal, triangular, Gamma, Logistic) for data generation
 
+proposal
+
+	Frechet-Maha-index.py --> Index code
+	test_Toydatasets.ipynb ---> test of the index in toys datasets
