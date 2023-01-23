@@ -1,7 +1,8 @@
 
 import sys
+sys.path.append("../AnotherIndicesTest/mdcgenpy/mdcgenpy")
 import getopt
-sys.path.insert(0, '~/nestor/')
+#sys.path.insert(0, '~/nestor/')
 from clusters import ClusterGenerator
 from sklearn.mixture import GaussianMixture
 from sklearn import metrics
@@ -197,11 +198,11 @@ def arguments(argv):
             arg_end = arg
 
 
-    return 
+    return arg_filepath, arg_savepath, arg_start, arg_end
 
 
 if __name__ == "__main__":
-  filepath,savepath,mdcpath,start,end =arguments(sys.argv)
+  filepath,savepath,start,end =arguments(sys.argv)
   
   car=pd.read_excel(filepath)  
 
