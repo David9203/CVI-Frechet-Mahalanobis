@@ -1,7 +1,6 @@
 
 import sys
 import getopt
-sys.path.insert(0, '~/nestor/')
 from clusters import ClusterGenerator
 from sklearn.mixture import GaussianMixture
 from sklearn import metrics
@@ -167,17 +166,17 @@ def arguments(argv):
 
     arg_filepath=""
     arg_savepath=""
-
+    arg_mdcpath=""
     arg_start=""
     arg_end=""
 
     sys.path.insert(0,mdcpath)
 
-    arg_help = "{0} -fp <filepath> -sp <savepath>  -s <start> -e <end>".format(argv[0])
+    arg_help = "{0} -fp <filepath> -sp <savepath> -md <mdcpath> -s <start> -e <end>".format(argv[0])
     
     try:
         opts, args = getopt.getopt(argv[1:], "hi:fp:sp:md:s:e:", ["help", "filepath=", 
-        "savepath=",  "start=", "end="])
+        "savepath=", "mdcpath=", "start=", "end="])
     except:
         print(arg_help)
         sys.exit(2)
@@ -190,7 +189,8 @@ def arguments(argv):
             arg_filepath = arg
         elif opt in ("-sp", "--savepath"):
             arg_savepath = arg
-      
+        elif opt in ("-md", "--mdcpath"):
+            arg_mdcpath = arg
         elif opt in ("-s", "--start"):
             arg_start = arg
         elif opt in ("-e", "--end"):
@@ -202,7 +202,7 @@ def arguments(argv):
 
 if __name__ == "__main__":
   filepath,savepath,mdcpath,start,end =arguments(sys.argv)
-  
+  sys.path.insert(0,mdcpath)
   car=pd.read_excel(filepath)  
 
   for i in range(start,end,10):
