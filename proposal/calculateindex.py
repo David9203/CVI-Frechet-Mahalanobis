@@ -172,8 +172,6 @@ def arguments(argv):
     arg_start=""
     arg_end=""
 
-    sys.path.insert(0,mdcpath)
-
     arg_help = "{0} -fp <filepath> -sp <savepath>  -s <start> -e <end>".format(argv[0])
     
     try:
