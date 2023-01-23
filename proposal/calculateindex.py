@@ -1,4 +1,5 @@
 
+
 import sys
 sys.path.append("../AnotherIndicesTest/mdcgenpy/mdcgenpy")
 import getopt
@@ -172,10 +173,10 @@ def arguments(argv):
     arg_start=""
     arg_end=""
 
-    arg_help = "{0} -fp <filepath> -sp <savepath>  -s <start> -e <end>".format(argv[0])
+    arg_help = "{0} -f <filepath> -sp <savepath>  -c <start> -e <end>".format(argv[0])
     
     try:
-        opts, args = getopt.getopt(argv[1:], "hi:fp:sp:md:s:e:", ["help", "filepath=", 
+        opts, args = getopt.getopt(argv[1:], "hi:f:s:c:e:", ["help", "filepath=", 
         "savepath=",  "start=", "end="])
     except:
         print(arg_help)
@@ -185,12 +186,12 @@ def arguments(argv):
         if opt in ("-h", "--help"):
             print(arg_help)  # print the help message
             sys.exit(2)
-        elif opt in ("-fp", "--filepath"):
+        elif opt in ("-f", "--filepath"):
             arg_filepath = arg
-        elif opt in ("-sp", "--savepath"):
+            print('arggg',arg)
+        elif opt in ("-s", "--savepath"):
             arg_savepath = arg
-      
-        elif opt in ("-s", "--start"):
+        elif opt in ("-c", "--start"):
             arg_start = arg
         elif opt in ("-e", "--end"):
             arg_end = arg
@@ -201,7 +202,7 @@ def arguments(argv):
 
 if __name__ == "__main__":
   filepath,savepath,start,end =arguments(sys.argv)
-  
+  print('**FILEPATH**',filepath)
   car=pd.read_excel(filepath)  
 
   for i in range(start,end,10):
