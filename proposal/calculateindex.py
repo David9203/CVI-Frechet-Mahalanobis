@@ -176,7 +176,7 @@ def arguments(argv):
     
     try:
         opts, args = getopt.getopt(argv[1:], "hi:fp:sp:md:s:e:", ["help", "filepath=", 
-        "savepath=", "mdcpath=", "start=", "end="]])
+        "savepath=", "mdcpath=", "start=", "end="])
     except:
         print(arg_help)
         sys.exit(2)
