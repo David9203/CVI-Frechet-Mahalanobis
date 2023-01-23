@@ -1,5 +1,4 @@
 
-
 import sys
 sys.path.append("../AnotherIndicesTest/mdcgenpy/mdcgenpy")
 import getopt
@@ -197,7 +196,7 @@ def arguments(argv):
             arg_end = arg
 
 
-    return arg_filepath, arg_savepath, arg_start, arg_end
+    return arg_filepath, arg_savepath, int(arg_start), int(arg_end)
 
 
 if __name__ == "__main__":

@@ -1,8 +1,6 @@
-#!/bin/bash          
-filepath=""
-savepath=""
-mdcpath=""
-start="" 
-end=""
+#!/bin/bash              
 
-Script.py filepath savepath mdcpath 0 900 
+
+pathfilee='~/nestor/CVI-Frechet-Mahalanobis/AnotherIndicesTest/SyntheticData Configuration/info1_real_normaloutnoise.xlsx'
+echo $pathfilee
+python3 calculateindex.py  -f $pathfilee -s "~/" -c '0' -e '50'  &
