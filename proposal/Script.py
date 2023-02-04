@@ -4,6 +4,8 @@ import sys
 filepath=sys.argv[0] 
 savepath=sys.argv[1] 
 mdcpath=sys.argv[2]
+start=sys.argv[3] 
+end=sys.argv[4]
 
 sys.path.insert(0,mdcpath)
 from clusters import ClusterGenerator
