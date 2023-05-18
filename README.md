@@ -12,3 +12,9 @@ Proposal
 	test_Toydatasets.ipynb ---> test of the index in toys datasets
 	
 Results-> You can find the Methodology results in csv format
+
+Data
+
+PAM data is presented in the PAM_Data.csv file
+
+On websites https://archive.ics.uci.edu/ml/index.php and https://www.cs.ucr.edu/~eamonn/time_series_data/ you will find the other real-word datasets we work with to run the benchmark datasets
